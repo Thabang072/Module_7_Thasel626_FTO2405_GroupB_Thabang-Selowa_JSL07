@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const modal = document.getElementById('modal');
     const certificateContent = document.getElementById('certificateContent');
     const closeModal = document.querySelector('.close');
-  
+
     // Hide the modal initially
     modal.style.display = 'none';
   
@@ -11,13 +11,13 @@ document.addEventListener('DOMContentLoaded', function () {
       e.preventDefault();
   
       // 🚨 Get input values
-      const studentNameInput = document.getElementById('studentName');
-      const personalMessageInput = document.getElementById('personalMessage'); 
-      const courseNameInput = document.getElementById('courseName'); 
+      const studentNameInput = document.getElementById('studentName').value;
+      const personalMessageInput = document.getElementById('personalMessage').value; 
+      const courseNameInput = document.getElementById('courseName').value; 
   
-      const studentName = studentNameInput.value;
-      const personalMessage = personalMessageInput.value;
-      const courseName = courseNameInput ? courseNameInput.value : "a course"; // Fallback to "a course" if no input
+      const studentName = studentNameInput;
+      const personalMessage = personalMessageInput;
+      const courseName = courseNameInput ? courseNameInput : "a course"; // Fallback to "a course" if no input
   
       if (studentName.trim() === '' || personalMessage.trim() === '') {
         alert('Please fill in all fields');
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <p>has almost completed the</p>
       <h4>${courseName} Course</h4>
       <p>with legendary perseverance and world-class bad-assery for never giving up🏆</p>
-      <img src="https://codespace-assets.global.ssl.fastly.net/wp/assets/website/codespace-primary-logo-light.svg" alt="Seal" style="margin-top: 20px;">
+      //<img src="https://codespace-assets.global.ssl.fastly.net/wp/assets/website/codespace-primary-logo-light.svg" alt="Seal" style="margin-top: 20px;">
       <p>${personalMessage}</p>
       `;
     
